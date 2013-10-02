@@ -248,6 +248,7 @@ module Prop
     end
 
     def create_github_repo(repo_name)
+      run 'brew install hub'
       path_addition = override_path_for_tests
       run "#{path_addition} hub create #{repo_name}"
     end
